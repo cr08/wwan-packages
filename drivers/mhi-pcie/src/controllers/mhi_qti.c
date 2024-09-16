@@ -430,6 +430,7 @@ rpm_resume_exit:
 	return ret;
 }
 
+__attribute__((unused))
 static int mhi_system_resume(struct device *dev)
 {
 	int ret = 0;

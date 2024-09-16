@@ -124,7 +124,7 @@ rmnet_mhi0.1 Link encap:UNSPEC  HWaddr 02-50-F4-00-00-00-00-00-00-00-00-00-00-00
 
 # adjust CPU load balancing
 root@OpenWrt:~# echo 2 > /sys/class/net/rmnet_mhi0/queues/rx-0/rps_cpus 
-root@OpenWrt:~# echo 4 > /sys/class/net/rmnet_mhi0.1/queues/rx-0/rps_cpus 
+root@OpenWrt:~# echo 2 > /sys/class/net/rmnet_mhi0.1/queues/rx-0/rps_cpus 
 root@OpenWrt:~# echo 2000 > /proc/sys/net/core/netdev_max_backlog 
 root@OpenWrt:~# cat /sys/class/net/rmnet_mhi0/queues/rx-0/rps_cpus
 2
