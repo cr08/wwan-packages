@@ -11,7 +11,7 @@ var callFileList = rpc.declare({
 	filter: function(list, params) {
 		var rv = [];
 		for (var i = 0; i < list.length; i++)
-			if (list[i].name.match(/^cdc-wdm/))
+			if (list[i].name.match(/^mhi_QMI/))
 				rv.push(params.path + list[i].name);
 		return rv.sort();
 	}

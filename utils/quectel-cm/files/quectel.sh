@@ -56,9 +56,17 @@ proto_quectel_setup() {
 		return 1
 	}
 
+	dev_major="$(stat -c %t "$device")"
+	dev_maj_dec=$((0x$dev_major))
+	dev_minor="$(stat -c %T "$device")"
+	dev_min_dec=$((0x$dev_minor))
 	devname="$(basename "$device")"
-	devpath="$(readlink -f "/sys/class/usbmisc/$devname/device/")"
+	devpath="/sys/dev/char/$dev_maj_dec:$dev_min_dec/"
+	devpath="$(readlink -f "$devpath")"
+	devpath="$(readlink -f "$devpath/../../../")"
+	devpath="$(find $devpath -name "*IP_HW0")"
 	ifname="$(ls "$devpath/net" 2>"/dev/null")"
+
 	[ -n "$ifname" ] || {
 		echo "The interface could not be found."
 		proto_notify_error "$interface" NO_IFACE
