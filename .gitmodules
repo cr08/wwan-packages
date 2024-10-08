@@ -1,0 +1,12 @@
+[submodule "applications/luci-app-modemband"]
+	path = applications/luci-app-modemband
+	url = https://github.com/4IceG/luci-app-modemband
+[submodule "applications/luci-app-3ginfo-lite"]
+	path = applications/luci-app-3ginfo-lite
+	url = https://github.com/4IceG/luci-app-3ginfo-lite
+[submodule "applications/luci-app-modemdefine"]
+	path = applications/luci-app-modemdefine
+	url = https://github.com/4IceG/luci-app-modemdefine
+[submodule "applications/luci-app-sms-tool-js"]
+	path = applications/luci-app-sms-tool-js
+	url = https://github.com/4IceG/luci-app-sms-tool-js
